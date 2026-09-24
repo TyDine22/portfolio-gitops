@@ -1,0 +1,16 @@
+replicaCount: 2
+
+image:
+  repository: dinety/portfolio
+  tag: "3"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 4321
+
+container:
+  port: 4321
+
+resources: {}
